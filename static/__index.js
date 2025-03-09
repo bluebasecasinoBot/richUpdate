@@ -372,6 +372,6 @@ __SYD.page1SocialBtn = ({contentSrc,link = '#'}) =>{
 
 __m(__SYD.container())
 
-addEventListener('DOMContentLoaded' , e =>{
+window.addEventListener('DOMContentLoaded' , e =>{
     manage_mediaQuery(window.innerWidth)
 })
