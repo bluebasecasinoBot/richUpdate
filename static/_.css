@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    /* outline: 1px dashed #171717; */
+}
+body{
+    overflow: hidden;
+}
+.container::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 150, 0.15) 10%, transparent 60%);
+    z-index: -1;
+}
+/* @font-face{
+    font-family: Mantis Rumble_PersonalUseOnly;
+    src:url('./assets/mantis_rumble/Mantis\ Rumble_PersonalUseOnly.ttf')
+}
+@font-face {
+    font-family: this_cafe;
+    src: url('./assets/this_cafe/This\ Cafe.ttf');
+}
+@font-face {
+    font-family: sunrise;
+    src: url('./assets/Komigo3D-Regular.ttf');
+} */
+@font-face {
+    font-family: sticker;
+    src: url('./assets/Poppins-Medium.ttf');
+} 
+@font-face {
+    font-family: header;
+    src: url('./assets/FugazOne-Regular.ttf');
+}
+.btn_buy
+{
+    background-color:#00FFFF;
+    color: #000000;
+    font-weight: 700;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+    border-radius: 10px;
+    transition: all .3s linear;
+    /* background: linear-gradient(to bottom , #44f9b7ec , #2e9b96d9); */
+}
+
+.btn_buy:hover
+{
+    background-color: #FFD700;
+    transform: scale3d(0.9,0.9,0.9);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 1);
+    /* color: #2e9b96; */
+}
+
+.btn_copy
+{
+    border: 2px solid #171717;
+    border-bottom:5px solid #171717;
+    border-radius: 5px;
+}
+
+.btn_copy:hover
+{
+    border-top: 5px solid #171717;
+    border-bottom: 2px solid #171717;
+}
+
+.click{
+    cursor: pointer;
+    transition: transform .3s linear;
+}
+.click:active{transform: scale(.9);}
+.menuRotate{
+    cursor: pointer;
+    transition: transform .3s linear;
+}
+.menuRotate:active{transform: rotateZ(45deg);}
+h1{
+    font-weight: 100;
+    /* color: #01213c; */
+}
+.mobile_menu p{
+    height:100%;
+    width:100%;
+    padding:10px
+}
+.animate
+{
+    animation-name: pulse;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes pulse
+{
+    0%
+    {
+        transform: scale(1);
+    }
+
+    100%
+    {
+        transform: scale(1.5);
+    }
+}
+.rainbow_text
+{
+    animation: rain_bow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    /* color: #3788da86; */
+}
+
+.rainbow__text
+{
+    background:#884711;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+
+    /* animation: rain_bow__text; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    transition: background linear .5s;
+    animation-timing-function: linear;
+}
+
+.right_slant
+{
+    position: relative;
+    isolation: isolate;
+}
+
+.right_slant::before
+{
+    content: "";
+    position:absolute;
+    top:calc(100% - 5px);
+    right:0;
+    height: 50px;
+    width: 5px;
+    background: linear-gradient(to right , #000 -10%, #44f9b7);
+    transform: rotateZ(-45deg);
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.ad_text{
+    border: unset;
+    border-left:3px groove #c99649;
+    padding-left: 10px;
+    font-weight: 900;
+}
+
+.left_slant
+{
+    position: relative;
+    isolation: isolate;
+}
+
+.left_slant::before
+{
+    content: "";
+    position:absolute;
+    top:calc(100% - 5px);
+    left:0;
+    height: 50px;
+    width: 5px;
+    background: linear-gradient(to right , #000 -10% , #44f9b7);
+    transform: rotateZ(45deg);
+    z-index: -1;
+    border-radius: 2px;
+}
+
+.top_header_text
+{
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.animate__
+{
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+    animation-direction: alternate-reverse;
+
+}
+
+@keyframes pulse
+{
+    0%
+    {
+        transform:translateX(25%) scale(1);
+    }
+
+    100%
+    {
+        transform:translateX(25%) scale(1.1);
+    }
+}
+
+
+.animate__right
+{
+    animation-name: pulse__right;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes pulse__right
+{
+    0%
+    {
+        transform: translateX(50px) scale(1);
+    }
+
+    100%
+    {
+        transform: translateX(50px) scale(1.1);
+    }
+}
+
+.navBar
+{
+    background:#121212 ;
+    border-bottom: 2px solid #00FFCC;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+}
+
+.navBar p
+{
+    color: #fff;
+}
+
+.navBar p:hover
+{
+    color:#39FF14 ;
+}
+
+.tab_text
+{
+    position: relative;
+    background: linear-gradient(145deg, #00ffcc, #008080);
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 255, 150, 0.8),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.6),
+                inset 3px 3px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tab_text:hover {
+    transform: translateY(-5px); /* Moves up slightly for 3D effect */
+    box-shadow: 5px 5px 15px rgba(0, 255, 150, 1), 
+                inset -3px -3px 5px rgba(0, 0, 0, 0.6), 
+                inset 3px 3px 5px rgba(255, 255, 255, 0.2);
+}
+
+.tab_text:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 5px rgba(0, 255, 150, 0.6);
+}
+
+.btn_buy {
+    position: relative;
+    font-size: 18px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    color: #00FFCC; /* Neon cyan-green, matches the Lambo */
+    padding: 12px 25px;
+    background: transparent;
+    border: 3px solid #00FFCC; /* Neon outline */
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* 3D Effect: Adding a bottom border for depth */
+.btn_buy::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: 4px;
+    background: #00FFCC; /* Same neon effect */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect: Glow and movement */
+.btn_buy:hover {
+    color: #000; /* Turns text black on hover for contrast */
+    background: #00FFCC; /* Neon glow effect */
+    box-shadow: 0px 0px 15px #00FFCC;
+}
+
+/* Hover: Enhance 3D bottom border */
+.btn_buy:hover::before {
+    bottom: 0;
+    height: 8px;
+    box-shadow: 0px 0px 10px #00FFCC;
+}
+
+/* Click Effect: Press down */
+.btn_buy:active {
+    transform: translateY(3px);
+}
+
+.button-tab {
+    position: relative;
+    font-size: 18px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    color: #00FFCC; /* Neon cyan-green */
+    padding: 12px 25px;
+    background: transparent;
+    border: 3px solid #00FFCC; /* Neon outline */
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    display: inline-block; /* Makes it behave like a tab */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 3D Effect: Adding a bottom border for depth */
+.button-tab::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: 4px;
+    background: #00FFCC; /* Same neon effect */
+}
+
+/* Hover Effect: Just a subtle glow to show it's there, but not clickable */
+.button-tab:hover {
+    box-shadow: 0px 0px 15px rgba(0, 255, 204, 0.7);
+    background: transparent;
+}
+
+/* No click effect (since it's not a real button) */
+.button-tab:active {
+    transform: none;
+}
+
+.glassMorph_btn
+{
+    background: rgba(0, 175, 239, 0.4);
+    border: 2px solid rgba(0, 175, 239, 0.3);
+    border-bottom: 4px solid rgba(0, 175, 239, 0.5);
+    /* backdrop-filter: blur(10px); */
+    border-radius: 12px;
+    transition: all linear .3s;
+    /* color: rgba(0, 175, 239, 0.535); */
+}
+
+.glassMorph_btn:hover
+{
+    transform: translateY(2px);
+    border-bottom: 2px solid rgba(0, 175, 239, 0.3);
+}
+
+.tab_design_3d
+{
+    background: linear-gradient(180deg, #0D1117, #161B22);
+    border: 4px solid transparent;
+    border-bottom: 3px solid rgba(57, 255, 20, 0.6);
+    transition: transform 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+}
+
+.tab_design_3d:hover
+{
+    transform: translateY(-2px);
+    border-bottom: 3px solid rgba(57, 255, 20, 0.6);
+}
